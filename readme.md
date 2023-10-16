@@ -2,19 +2,22 @@
 
 ## Obsah
 
-### [Úvod](#c3bavod-1)
-### [Dostupné nástroje](#dostupnc3a9-nc3a1stroje-1)
-- [Zenmap](#zenmap)
-- [Sparta](#sparta)
-- [Aircrack-ng](#aircrack-ng)
-- [Burp Suite](#burp-suite)
-- [John the Ripper](#john-the-ripper)
-
-### [Distribuce a instalace Kali Linux](#distribuce-a-instalace-kali-linux-1)
-- [Stahování Kali Linux](#stahování-kali-linux)
-- [Instalace na hardware](#instalace-na-hardware)
-- [Live image](#live-image)
-- [Virtuální stroj](#virtuální-stroj)
+- [Kali linux](#kali-linux)
+  - [Obsah](#obsah)
+  - [Úvod](#úvod)
+  - [Dostupné nástroje](#dostupné-nástroje)
+    - [Zenmap](#zenmap)
+    - [Wireshark](#wireshark)
+    - [Sparta](#sparta)
+    - [Metasploit](#metasploit)
+    - [Aircrack-ng](#aircrack-ng)
+    - [Burp Suite](#burp-suite)
+    - [John the Ripper](#john-the-ripper)
+  - [Distribuce a Instalace Kali Linux](#distribuce-a-instalace-kali-linux)
+    - [Stahování Kali Linux](#stahování-kali-linux)
+    - [Instalace na hardware](#instalace-na-hardware)
+    - [Live image](#live-image)
+    - [Virtuální stroj](#virtuální-stroj)
 
 ## Úvod
 - Kali Linux je linuxový operační systém, který vznikl s cílem poskytnout komplexní řešení pro bezpečnostní testování, penetrační testování a kybernetickou bezpečnost. Tento operační systém, vyvinutý firmou Offensive Security, nabízí bezpečnostním profesionálům, etickým hackerům a všem zájemcům o bezpečnost jedinečnou sadu nástrojů a prostředí pro identifikaci zranitelností, analýzu sítí a ochranu proti kybernetickým hrozbám.
@@ -25,18 +28,27 @@
 
 
 ## Dostupné nástroje
-- 
+
 ### Zenmap
 - GUI pro nástroj Nmap
 - Port Scanner na skenování otevřených, zavřených a posunutých portů
 - Využívá trojcestné potvrzování(3-way handshake), který používá TCP protocol
-- Klient pošle SYN(synchronizace) packet spolu s ISN(initial sequence number)
-- Server vrací SYN + ACK(acknowledge) packetem, který také obsahuje ISN + 1
-- Klient obdrží odpověď a odpoví svým ACK paketem pro dokončení
+  - Klient pošle SYN(synchronizace) packet spolu s ISN(initial sequence number)
+  - Server vrací SYN + ACK(acknowledge) packetem, který také obsahuje ISN + 1
+  - Klient obdrží odpověď a odpoví svým ACK paketem pro dokončení
 - Můžeme narazit na tři druhy portů
-    - filtrované: porty používající firewall pro zabezpečení, tyhle porty na Namp nereagují
+    - filtrované: Tyto porty jsou chráněny firewallem a na běžné skenovací nástroje, jako je Nmap, často nereagují
     - zavřené: zde nic neběží, avšak firewall stále nebrání v provádění testů nebo prozkoumání
     - otevřené: porty jejichž administrace je otevřena všem. Všichni jsou schopni zjistit jaká administrace zde běží.
+
+![Zenmap](https://geek-university.com/wp-content/uploads/2016/03/zenmap_example_scan.jpg)
+
+### Wireshark
+- Wireshark je mimořádně výkonný nástroj pro analýzu síťového provozu, který umožňuje uživatelům zachytávat, zobrazovat a analyzovat síťové pakety v reálném čase.
+- Tento software poskytuje detailní pohled do komunikace mezi zařízeními v síti a umožňuje uživatelům sledovat, jak data putují přes síťové rozhraní.
+- Wireshark podporuje mnoho různých síťových protokolů a dokáže identifikovat zranitelnosti, ladit síťové problémy a sledovat síťový provoz pro účely bezpečnostního auditu.
+- Je často používán v oblasti bezpečnostního testování k odhalení zranitelností v síti a provádění bezpečnostní analýzy.
+- Wireshark je nástroj s otevřeným zdrojovým kódem a je dostupný pro různé platformy, což ho činí oblíbenou volbou mezi profesionály v oblasti kybernetické bezpečnosti a síťových administrátorů.
 
 ### Sparta
 - GUI aplikace založená na pythonu k automatizaci skenování, zhodnocení slabin a sběru informací.
@@ -44,6 +56,18 @@
 - Obsahuje nástroj Hydra pro cracking(louskání) hesel pomocí slovníkových útoků nebo brute-force.
 - Dobře spolupracuje s Zenmapem, kde si dokáže importovat data pomocí XML.
 - Ke skenování se používá Nikto
+
+### Metasploit
+- Metasploit je výkonný framework pro testování zranitelností a provádění penetračních testů.
+- Umí simulovat různé útoky a je známý pro svou schopnost najít a využít zranitelnosti v systémech.
+- Metasploit poskytuje širokou škálu nástrojů a modulů, které usnadňují provádění útoků a testování zabezpečení.
+- Framework obsahuje připravené exploit moduly pro různé zranitelnosti, což umožňuje rychle provádět útoky.
+- Je oblíbeným nástrojem pro profesionály v oblasti kyberbezpečnosti, etických hackerů a penetračních testerů.
+- **Modularita**: Metasploit je známý svou modulární architekturou, která umožňuje uživatelům přidávat vlastní moduly a rozšiřovat jeho funkčnost.
+- **Exploit Databáze**: Obsahuje rozsáhlou databázi exploit modulů a payloadů pro různé zranitelnosti a systémy.
+- **Vývojářská Komunita**: Má aktivní komunitu vývojářů a uživatelů, kteří přispívají k rozvoji projektu a udržují jeho aktuálnost.
+- **Využití v Bezpečnostním Testování**: Metasploit se často používá pro testování zabezpečení a identifikaci zranitelností v sítích a aplikacích.
+
 
 ### Aircrack-ng
 - Soubor nástrojů k ověření zabezpečení bezdrátových sítí
@@ -71,6 +95,8 @@
 - Má vlastní scanner na hledání zranitelností a chyb. Může identifikovat bezpečnostní trhliny jako SQL injection, cross-site scripting a zastaralé verze softwaru.
 - Decoder a Encoder pro dekódování různých formátů dat.
 
+![Burp Suite](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Thumbnail_BurpSuite.png/800px-Thumbnail_BurpSuite.png)
+
 ### John the Ripper
 - Balíček několika různých programů na prolamování hesel.
 
@@ -84,5 +110,3 @@
 - Přestože se jedná o plně funkční systém, jeho použití pro každodenní potřeby není doporučeno. Proto lze také využít Live boot image, který spočívá k zavedení systému přímo z bootovatelného média. Výhodou je, že tímto způsobem nezasáhneme do počítače a zároveň máme přímý přístup k hardwaru.
 ### Virtuální stroj
 - Pro vyzkoušení systému bez zásahu do počítače, či nutnosti vytvářet instalační médium je nejlepším způsobem spustit Kali Linux na stávajícím operačním systému jako virtuální stroj na platformách jako je VMWare, Virtualbox, či Hyperware. Virtuální stroje běží nad hostitelským operačním systémem, což znamená, že nemají přímý přístup k fyzickému hardware počítače. To může být problém, pokud chcete provádět určité úkoly, které vyžadují přímý přístup k hardware, například útoky na bezdrátové sítě. Navíc virtuální stroje sdílí prostředky s hostitelským operačním systémem, to znamená, že mohou mít omezený výkon.
-
-
