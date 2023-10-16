@@ -86,7 +86,7 @@
         - díky tomuto nástroji lze útočit na bezdrátové sítě pomocí injekce, přeposílání paketů (pakety jsou zachyceny, uloženy a znovu poslány) a deutorizace (klientům sítě je poslán paket, který je donutí odpojit se od sítě, což útočníkovi následně umožní odposlechnout přihlašovací údaje k síti)
     - aircrack-ng
         - slouží k prolamování zachycených hashů
-- použití tohoto softwaru není triviální, proto je útokům na bezdrátové sítě s cílem získání hesla lepší použít Wifite, který celý útok zautomatizuje
+- Použití tohoto softwaru není triviální, proto je útokům na bezdrátové sítě s cílem získání hesla lepší použít Wifite, který celý útok automatizuje.
 
 ### Burp Suite
 - Nástroj pro testování webových aplikací. Poskytuje širokou škálu funkcí pro analýzu a manipulaci komunikace.
@@ -97,8 +97,23 @@
 
 ![Burp Suite](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Thumbnail_BurpSuite.png/800px-Thumbnail_BurpSuite.png)
 
-### John the Ripper
-- Balíček několika různých programů na prolamování hesel.
+### SQLMap
+- SQLMap je výkonným nástrojem pro testování zabezpečení webových aplikací a identifikaci SQL injection zranitelností.
+- Tento nástroj automatizuje proces detekce a zneužití SQL injection útoků v databázových systémech.
+- SQLMap umožňuje provádět různé typy SQL injection útoků, včetně union-based, time-based, blind, a dalších.
+- Poskytuje uživatelské rozhraní, které usnadňuje konfiguraci a spouštění testů na cílových webových aplikacích.
+- Je oblíbeným nástrojem mezi penetračními testery a bezpečnostními profesionály pro identifikaci a odstranění SQL injection zranitelností a ochranu webových aplikací před tímto typem útoků.
+
+### Hashcat
+- **Hashcat** je výkonný nástroj pro prolamování hesel a získávání hesel z různých formátů hashů.
+- Tento software je známý svou schopností rychle a efektivně prolamovat hesla prostřednictvím různých metod, včetně brute-force útoků, slovníkových útoků a kombinací těchto technik.
+- Klíčové rysy Hashcat zahrnují:
+    - **Podpora Pro Různé Hashovací Algoritmy**: Hashcat podporuje širokou škálu hashovacích algoritmů, což umožňuje pracovat s různými typy hashovaných hesel.
+    - **Rychlost**: Hashcat je známý svou výkonností a schopností rychle prolamovat hesla.
+    - **Slovníkové Útoky**: Tento nástroj umožňuje provádět slovníkové útoky, kdy jsou testována hesla z velké slovníkové databáze.
+    - **Kombinované Útoky**: Hashcat umožňuje kombinovat různé útoky a techniky pro co nejefektivnější prolamování hesel.
+- Hashcat je často používán kyberbezpečnostními profesionály a penetračními testery pro testování zabezpečení a identifikaci slabých hesel v rámci bezpečnostních auditů.
+
 
 ## Distribuce a Instalace Kali Linux
 - V této části se zaměříme na způsoby, jak získat a nainstalovat Kali Linux. Kali Linux je k dispozici ve formě distribuce, kterou lze zdarma stáhnout z oficiálních zdrojů a instalovat na různé platformy, včetně fyzických počítačů, virtuálních strojů a bootovatelných médií.
